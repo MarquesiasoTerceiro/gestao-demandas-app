@@ -13,9 +13,9 @@
     "possuiForms": "Não",
     "details": "teste de correção",
     "reason": "Alteração na Regra de Negócio da Base Manual da Equipe BI",
-    "status": "not_started",
+    "status": "development",
     "createdBy": "miguel-marques",
-    "updatedAt": "2026-09-25T19:54:09.202Z",
+    "updatedAt": "2026-09-25T19:56:25.641Z",
     "id": "d-1790365758615",
     "area": "Teste correção",
     "description": "teste de correção"
