@@ -1,5 +1,13 @@
 [
   {
+    "action": "status_updated",
+    "demandId": "d-1790365673586",
+    "detail": "Não Iniciado → Em Desenvolvimento",
+    "actor": "miguel-marques",
+    "possuiForms": "Sim",
+    "at": "2026-09-25T19:55:29.798Z"
+  },
+  {
     "action": "updated",
     "demandId": "d-1790365758615",
     "detail": "Demanda atualizada: Giro",
