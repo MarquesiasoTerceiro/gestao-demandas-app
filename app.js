@@ -3,8 +3,8 @@
  * GitHub (opcional no Worker): owner, repo e paths ficam aqui para referência.
  */
 const CONFIG = Object.freeze({
-  workerUrl: "https://seu-worker.workers.dev",
-  github: { owner: "MarquesianoSecundaria", repo: "gestao-demandas", demandsPath: "demandas.json", auditPath: "log.json" },
+    workerUrl: "github-api",
+    github: { owner: "MarquesiasoTerceiro", repo: "gestao-demandas-app", demandsPath: "demandas.json", auditPath: "log.json" },
   requestTimeout: 9000
 });
 const USERS = [
