@@ -23,7 +23,7 @@
   {
     "activityId": "d-1790365673586",
     "category": "Teste Novo",
-    "type": "Atualização",
+    "type": "Correção",
     "priority": "P2",
     "title": "CIEX",
     "previsao": 2,
@@ -36,7 +36,7 @@
     "reason": "",
     "status": "development",
     "createdBy": "miguel-marques",
-    "updatedAt": "2026-09-25T20:00:40.791Z",
+    "updatedAt": "2026-09-25T20:01:59.602Z",
     "id": "d-1790365673586",
     "area": "Teste Novo",
     "description": "Teste de descrição"
