@@ -33,41 +33,6 @@
     return body;
   }
   async function readFile(name) {
-    try {(() => {
-  const owner = "MarquesiasoTerceiro";
-  const repo = "gestao-demandas-app";
-  const branch = "main";
-  const tokenKey = "demandas-github-token";
-  const endpoint = `https://api.github.com/repos/${owner}/${repo}/contents/`;
-  const token = () => sessionStorage.getItem(tokenKey);
-  const encode = (text) => {
-    const bytes = new TextEncoder().encode(text);
-    let binary = "";
-    for (const byte of bytes) binary += String.fromCharCode(byte);
-    return btoa(binary);
-  };
-  const decode = (content) => {
-    const binary = atob(content.replace(/\s/g, ""));
-    const bytes = Uint8Array.from(binary, (character) => character.charCodeAt(0));
-    return new TextDecoder().decode(bytes);
-  };
-  async function github(path, options = {}) {
-    const headers = {
-      Accept: "application/vnd.github+json",
-      "X-GitHub-Api-Version": "2022-11-28",
-      ...(options.body ? { "Content-Type": "application/json" } : {}),
-      ...(token() ? { Authorization: `Bearer ${token()}` } : {})
-    };
-    const response = await fetch(path, { ...options, headers: { ...headers, ...(options.headers || {}) } });
-    const body = response.status === 204 ? null : await response.json().catch(() => null);
-    if (!response.ok) {
-      const error = new Error(body?.message || `GitHub respondeu HTTP ${response.status}.`);
-      error.status = response.status;
-      throw error;
-    }
-    return body;
-  }
-  async function readFile(name) {
     try {
       const file = await github(`${endpoint}${name}?ref=${branch}`);
       return { data: JSON.parse(decode(file.content)), sha: file.sha };
